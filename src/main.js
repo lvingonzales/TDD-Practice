@@ -1,5 +1,9 @@
-import "./style.css";
+function sum(a, b) {
+    return a + b;
+}
 
-let test = document.createElement ("p");
-test.textContent = "TEST";
-document.body.append (test);
+function multiply(a,b){
+    return a*b;
+}
+
+module.exports = {sum, multiply};

@@ -1,9 +1,16 @@
-function sum(a, b) {
-    return a + b;
+function reverseString (str) {
+    str = Array.from(str);
+    str = reverseStringHelper(str);
+    return str.join('');
 }
 
-function multiply(a,b){
-    return a*b;
+function reverseStringHelper (str, buffer = []) {
+    if(!str.length){return};
+    buffer.push(str.pop());
+
+    reverseStringHelper(str, buffer);
+
+    return buffer;
 }
 
-module.exports = {sum, multiply};
+module.exports = {reverseString,};

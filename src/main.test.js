@@ -20,11 +20,13 @@ test('multiplies 2*2 to give 4', () => {
 })
 
 test ('subtracts 5 - 2 to give 3', () => {
-    expect(calculator.subtract(5,5)).toBe(3);
+    expect(calculator.subtract(5,2)).toBe(3);
 })
 
 test ('dividing by zero(0) should throw an error', () => {
-    expect(calculator.divide(2,0)).toThrow(Error);
+    expect(function () {
+        calculator.divide(2,0)
+    }).toThrow(new Error('Divide by zero(0) error'));
 })
 
 test ('dividing 10 / 2 to give 5', () => {

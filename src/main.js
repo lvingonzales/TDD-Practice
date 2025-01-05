@@ -13,4 +13,8 @@ function reverseStringHelper (str, buffer = []) {
     return buffer;
 }
 
-module.exports = {reverseString,};
+function capitalizeFirstLetter(str) {
+    return String(str).charAt(0).toUpperCase() + String(str).slice(1);
+}
+
+module.exports = {reverseString, capitalizeFirstLetter};
